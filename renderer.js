@@ -5,7 +5,7 @@ const fs     = require('fs')
 const path   = require('path')
 
 // .min for production mode
-const Vue = require( path.join(__dirname, 'node_modules/vue/dist/vue.js')) // min.
+const Vue = require( path.join(__dirname, 'node_modules/vue/dist/vue.min.js'))
 
 var Application = new Vue({
   el: '#markdown',
