@@ -1,0 +1,25 @@
+{
+  "name": "mPad",
+  "version": "1.0.0",
+  "description": "Little Markdown Application with VueJS and Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --all"
+  },
+  "keywords": [
+    "Electron",
+    "Vue",
+    "Marked"
+  ],
+  "author": "LimeBlack",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.4.1",
+    "electron-context-menu": "^0.8.0",
+    "electron-browser-window-options": "^1.0.3",
+    "electron-packager": "^8.5.1",
+    "marked": "^0.3.6",
+    "vue": "^2.1.10"
+  }
+}

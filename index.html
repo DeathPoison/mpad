@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <title>mPad - by LimeBlack ~ March 2017</title>
+    
+  </head>
+  <body class="absolute">
+    <div id="markdown">
+
+      <span v-html="activeThemes" class="hidden"></span>
+
+      <!-- 
+      transitions prevent refs... ugly...
+      https://github.com/vuejs/vue/issues/3481
+        -> i have to deal with ?   @yyx990803 (vuejs creator)
+      <transition name="fade" mode="out-in"> 
+      -->
+
+        <div id="app" v-html="screen"></div>
+
+        <textarea 
+          id="editor" 
+          v-if="edit"
+          ref="editor" 
+          :value="input" 
+          @input="update" 
+          debounce="300"
+        ></textarea>
+
+      <!-- 
+      </transition>
+          v-transition="fade"
+      -->
+
+      <div id="toolbar">
+        <button class="btn btn-danger"  @click="edit = !edit">Edit</button>
+        <button class="btn btn-primary" @click="safeMarkdown">Save</button>
+        <button class="btn btn-primary" @click="openMarkdown">Open</button>
+        <button class="btn btn-primary" @click="newFile">New</button>
+        <!-- button class="btn btn-default" @click="clickedHelp">Help</button -->
+        <select v-model="styles.theme">
+          <option value="">WhiteBlack</option>
+          <option :value="theme.name" v-for="theme in styles.themes">{{ theme.name | ucfirst }}</option>
+        </select>
+        <span>Current File: {{ (fileName) ? fileName : 'No file selected' }}</span>
+      </div>
+    </div>
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

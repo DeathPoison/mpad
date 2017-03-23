@@ -1,0 +1,27 @@
+html, body {
+  color:            #39D6DC;
+  background-color: #383C4A;
+}
+textarea {
+  color:            #39D6DC;
+  background-color: #F6F6F6;
+}
+select {
+  background-color: #39D6DC;
+}
+
+code { color: #f66; }
+
+#editor {
+  text-shadow: 0 0 0.2em #ffffff;
+  background-color: rgba(30,30,30,.85);
+}
+#toolbar > button { 
+  color:            #383C4A;
+  background-color: #39D6DC;
+}
+
+::-webkit-scrollbar-thumb, 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(205, 220, 57, .5); 
+}
