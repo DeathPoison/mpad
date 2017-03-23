@@ -17,6 +17,7 @@ mPad-win32-x64
 
 # yarn lock file
 yarn.lock
+.yarnclean
 
 # Dependency directories
 node_modules

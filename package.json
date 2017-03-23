@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --all"
+    "build": "./build.sh",
+    "dist": "./build_dist.sh"
   },
   "keywords": [
     "Electron",
