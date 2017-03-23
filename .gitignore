@@ -3,6 +3,9 @@ logs
 *.log
 npm-debug.log*
 
+# dist (build) dir
+dist
+
 # electron-packager
 mPad-darwin-x64   
 mPad-linux-armv7l 
