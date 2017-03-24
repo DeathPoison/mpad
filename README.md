@@ -5,42 +5,97 @@
 Just a little Markdown-Editor created to write my Daily-Reports at work.  
 Used Electron and VueJS to create this little Application.  
 
-## Just run mPad
+Tested on various Ubuntu/Debian based Systems, but any other with be fine!  
+I bundled Packages for the following distributions ( OS_ARCH ):  
 
-To run mPad just change to the build-dir of your Platform and run mPad binary.  
+- darwin-x64
+- linux-ia32
+- linux-armv7l
+- linux-x64
+- mas-x64
+- win32-ia32 
+- win32-x64
 
-Optionally pass a file as argument to open. 
+## Build from Sources
 
-## Install Sources
-
-1. Clone the Repo
+1. Clone the repository
  ```
  > git clone https://github.com/deathpoison/mpad.git
  ```
 
-1. Install dependencies
+1. Install js dependencies
  ```
- # using yarn
  > yarn
-
  # or npm
  > npm install
  ```
 
-1. Start development Application
+1. Start unbundled application
  ```
  > yarn run start
-
  # or npm
  > npm run start
  ```
 
-1. Bundle Application
+1. Bundle application
  ```
+ > yarn run build
+ # or npm...
  > npm run build
- # change to build dir of your pc architecture and run "mPad" binary
+
+ # change to dist dir of your pc architecture and run "mPad" binary
  > ./mPad
  ```
+
+## Prepare to run mPad
+
+1. Extract files
+
+ Extract tarball of your "OS_ARCH" from: 
+ ``` dist/"date %Y-%m-%d"_"date %s"/mPad-"OS_NAME"-"OS_ARCH".tar.gz ```  
+ to location of your choice ( my is "~/app/mpad" )
+
+1. Add "mpad" to $PATH
+
+ For Ubuntu it's enough to create a symlink to binary file called "mpad" in: "~/bin"
+ 
+ If not create one or use the existing one  
+ and adding the following to your .bashrc for persisten usage
+ ```
+ PATH=$PATH:$HOME/bin
+ export PATH
+ ```
+
+ Activate new .bashrc using:
+ ```> source ~/.bashrc```
+
+1. [GNOME ONLY] Link to MimeType: text/markdown
+
+ add desktop shortcut -> gnome based systems "open with" dialog  
+ 
+ ```
+ [Desktop Entry]
+ Name=mPad
+ Comment=Markdown Editor
+ Exec=mpad %f
+ MimeType=text/markdown
+ Type=Application
+ StartupNotify=true
+ Terminal=false
+ Categories=Editor;Markdown;Text;Electron;Vue;Webkit;
+ ```
+ Verify yourself at [Gnome Docs: Desktop Files](https://developer.gnome.org/integration-guide/stable/desktop-files.html.en)
+
+## Run mPad
+
+[GNOME ONLY] Open a FileBrowser and open a Markdown-file  
+[GNOME ONLY] choose "mPad" and start reading
+
+Open a FileBrowser and right-click on a Markdown-File  
+choose "open file with"  
+choose an custom command and use "mpad"  
+
+Optionaly pass a file as argument to open directly from a shell
 
 ## Keybindings  
 
@@ -60,6 +115,8 @@ Ctrl +
 ## TODO's
 
 - FIX: editor's height
+- FIX: editor toggle's to top, sometimes...
+- FIX: recover cursor position on change
 - FIX: in some cases the ctrl key is fixed...  
  ```just type ctrl again as little workaround here...```
 

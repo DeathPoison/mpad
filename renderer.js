@@ -238,7 +238,19 @@ var Application = new Vue({
 
     // load file if any givven
     if (arguments.length >= 2 ) {
-      let filename =  path.join(process.cwd(), arguments[arguments.length-1])
+      let filename
+      let file =  arguments[arguments.length-1]
+
+      if ( fs.existsSync(file) ) {
+        filename = file
+      } else if ( fs.existsSync(path.join(process.cwd(), file) ) ) {
+        filename = path.join(process.cwd(), file)
+      }
+      /* else {
+        console.log('cant find given file...')
+      } */
+
+      // check if the file exists
       this.fileName = filename
       this.loadFile( filename )
     }

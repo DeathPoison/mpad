@@ -12,5 +12,4 @@ tar czf mPad-win32-x64.tar.gz mPad-win32-x64/
 DISTNAME=`date +%Y-%m-%d`_`date +%s` #_`php -r "echo uniqid();"`
 mkdir -p dist/$DISTNAME
 mv mPad*tar.gz dist/$DISTNAME
-rm -rf mPad-*
 
