@@ -86,6 +86,10 @@ I bundled Packages for the following distributions ( OS_ARCH ):
  ```
  Verify yourself at [Gnome Docs: Desktop Files](https://developer.gnome.org/integration-guide/stable/desktop-files.html.en)
 
+## Or download
+
+ If you do not want to build this Application just download it from: [Pre-Release v0.1.3](https://github.com/DeathPoison/mpad/releases/tag/v0.1.3)
+
 ## Run mPad
 
 [GNOME ONLY] Open a FileBrowser and open a Markdown-file  
