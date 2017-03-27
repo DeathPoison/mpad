@@ -55,7 +55,9 @@ I bundled Packages for the following distributions ( OS_ARCH ):
 1. Extract files
 
  Extract tarball of your "OS_ARCH" from: 
- ``` dist/"date %Y-%m-%d"_"date %s"/mPad-"OS_NAME"-"OS_ARCH".tar.gz ```  
+ ``` 
+ dist/"date %Y-%m-%d"_"date %s"/mPad-"OS_NAME"-"OS_ARCH".tar.gz 
+ ```  
  to location of your choice ( my is "~/app/mpad" )
 
 1. Add "mpad" to $PATH
@@ -70,12 +72,14 @@ I bundled Packages for the following distributions ( OS_ARCH ):
  ```
 
  Activate new .bashrc using:
- ```> source ~/.bashrc```
+ ```
+ > source ~/.bashrc
+ ```
 
 1. [GNOME ONLY] Link to MimeType: text/markdown
 
  add desktop shortcut -> gnome based systems "open with" dialog  
- 
+ create file "mpad.desktop" in /usr/share/applications/ with following content:
  ```
  [Desktop Entry]
  Name=mPad
@@ -121,7 +125,9 @@ Ctrl +
 - FIX: editor toggle's to top, sometimes...
 - FIX: recover cursor position on change
 - FIX: in some cases the ctrl key is fixed...  
- ```just type ctrl again as little workaround here...```
+ ```
+ just type ctrl again as little workaround here...
+ ```
 
 - ADD: tutorial to create a gtk desktop link
 - ADD: status indicator
