@@ -11,7 +11,7 @@ const defaultWindowOpts = require('electron-browser-window-options')
 let mainWindow
 
 // debug mode
-let DEBUG = true // false
+let DEBUG = false
 
 // share cli argv's
 global.sharedObject = {args: process.argv}
