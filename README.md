@@ -1,3 +1,5 @@
+[![Snap Status](https://build.snapcraft.io/badge/DeathPoison/mpad.svg)](https://build.snapcraft.io/user/DeathPoison/mpad)
+
 # mPad  
 
 ## Description  
