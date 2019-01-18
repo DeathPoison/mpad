@@ -7,7 +7,7 @@
 Just a little Markdown-Editor created to write my Daily-Reports at work.  
 Used Electron and VueJS to create this little Application.  
 
-Tested on various Ubuntu/Debian based Systems, but any other with be fine!  
+Tested on various Ubuntu/Debian based Systems, but any other will be fine!  
 I bundled Packages for the following distributions ( OS_ARCH ):  
 
 - darwin-x64

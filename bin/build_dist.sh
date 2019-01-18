@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+SELF_DIR="$( cd "$( dirname "$0" )" && pwd )"
+
+cd $SELF_DIR/..
+
 rm -rf mPad-*
 yarn run build
 tar czf mPad-darwin-x64.tar.gz mPad-darwin-x64/
@@ -13,3 +17,4 @@ DISTNAME=`date +%Y-%m-%d`_`date +%s` #_`php -r "echo uniqid();"`
 mkdir -p dist/$DISTNAME
 mv mPad*tar.gz dist/$DISTNAME
 
+cd $SELF_DIR

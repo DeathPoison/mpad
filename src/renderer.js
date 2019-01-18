@@ -5,7 +5,7 @@ const fs     = require('fs')
 const path   = require('path')
 
 // .min for production mode
-const Vue = require( path.join(__dirname, 'node_modules/vue/dist/vue.min.js'))
+const Vue = require( path.join(__dirname, '../node_modules/vue/dist/vue.min.js'))
 
 var Application = new Vue({
   el: '#markdown',
@@ -19,7 +19,7 @@ var Application = new Vue({
     fileName:    undefined,
     shouldClose: false,
     styles:      {
-      base: 'assets/basic.css',
+      base: '../assets/basic.css',
       theme: 'LimeBlack',
       themes: []
     }
@@ -33,7 +33,7 @@ var Application = new Vue({
 
     // returns css links as HTML
     activeThemes: function () {
-      let thpath = '<link rel="stylesheet" type="text/css" href="'+path.join(__dirname, 'assets/basic.css')+'">'
+      let thpath = '<link rel="stylesheet" type="text/css" href="'+path.join(__dirname, '../assets/basic.css')+'">'
       thpath += "\n"
       this.styles.themes.forEach( function (el) {
         if ( this.styles.theme === el.name ) {
@@ -215,11 +215,11 @@ var Application = new Vue({
 
   mounted: function () {
     // load themes
-    fs.readdir(path.join(__dirname, 'assets/themes/' ), (err, dir) => {
+    fs.readdir(path.join(__dirname, '../assets/themes/' ), (err, dir) => {
       for (var i = 0, thpath; thpath = dir[i]; i++) {
         this.styles.themes.push({
           name: thpath.split('.')[0],
-          path: 'assets/themes/'+thpath
+          path: '../assets/themes/'+thpath
         })
       }
     });
