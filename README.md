@@ -1,6 +1,6 @@
 [![Snap Status](https://build.snapcraft.io/badge/DeathPoison/mpad.svg)](https://build.snapcraft.io/user/DeathPoison/mpad)
 
-# mPad  
+# mPad  [deprecated]
 
 ## Description  
 
@@ -121,26 +121,6 @@ Ctrl +
 
 ```
 
-## TODO's
-
-- FIX: editor's height
-- FIX: editor toggle's to top, sometimes...
-- FIX: recover cursor position on change
-- FIX: in some cases the ctrl key is fixed...  
- ```
- just type ctrl again as little workaround here...
- ```
-
-- ADD: tutorial to create a gtk desktop link
-- ADD: status indicator
-- ADD: settings pane
-- ADD: transitions
-- ADD: export for markdown, text, html or pdf
-- ADD: autosave
-- ADD: settings via user's app config dir
-
-- TODO: prevent clicking links? or not?
-- TODO: break mac compatibility... just for the lulz
 
 ## Author
 
